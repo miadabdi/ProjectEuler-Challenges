@@ -1,3 +1,6 @@
+import time
+start = time.time()
+
 largest_number = []
 for a in range(999,99,-1):
     for b in range(a,99,-1):
@@ -7,3 +10,6 @@ for a in range(999,99,-1):
             largest_number.append(int(num))
 
 print("The largest number is:",max(largest_number))
+
+end = time.time()
+print("it took {} seconds".format(end - start))

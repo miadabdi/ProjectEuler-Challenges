@@ -1,3 +1,6 @@
+import time
+start = time.time()
+
 def is_prime(num):
     #if the argument is prime returns "True"
     for i in range(2,int(num ** 0.5)+1):
@@ -17,3 +20,6 @@ def prime_factor(num):
     return prime_factors 
 
 print("The largest prime factor is:", int(max(prime_factor(600851475143))))
+
+end = time.time()
+print("it took {} seconds".format(end - start))

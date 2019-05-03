@@ -1,3 +1,6 @@
+import time
+start = time.time()
+
 sum_squares = 0
 square_sum = 0
 for i in range(1,101):
@@ -7,3 +10,6 @@ for i in range(1,101):
 square_sum = square_sum ** 2
 
 print("Diffrence:", abs(square_sum-sum_squares))
+
+end = time.time()
+print("it took {} seconds".format(end - start))

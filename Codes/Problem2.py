@@ -1,3 +1,6 @@
+import time
+start = time.time()
+
 def Fib_seq(limit):
     #returns numbers of Fib sequence under limit
     result = []
@@ -21,3 +24,6 @@ for item in Fib_seq(4000000):
         sum_even_fib += item
 
 print("Sum: {}".format(sum_even_fib))
+
+end = time.time()
+print("it took {} seconds".format(end - start))
