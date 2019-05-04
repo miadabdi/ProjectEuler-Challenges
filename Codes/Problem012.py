@@ -1,3 +1,6 @@
+import time
+start = time.time()
+
 def divisor(num):
     divisors = 2 # Every number has 2 divisors at least. 1 and the number itself
     for i in range(2,int(num**0.5)+1):
@@ -13,3 +16,6 @@ while True:
         break
     natural_number += 1
     triangle_numbers += natural_number
+
+end = time.time()
+print("it took {} seconds".format(end - start))

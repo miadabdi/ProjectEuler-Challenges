@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 data = "37107287533902102798797998220837590246510135740250\
 46376937677490009712648124896970078050417018260538\
 74324986199524741059474233309513058123726617309629\
@@ -110,3 +113,6 @@ for end in range(50,5001,50):
 
 list_of_numbers = [int(number) for number in list_of_numbers] # this line converts string elements to integer
 print("the first ten digits of sum are:",str(sum(list_of_numbers))[:10])
+
+end = time.time()
+print("it took {} seconds".format(end - start_time))
