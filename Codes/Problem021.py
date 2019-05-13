@@ -1,3 +1,6 @@
+import time
+start = time.time()
+
 def remove_duplicates(l):
     # Removes duplicate values of the given list
     return list(set(l))
@@ -24,3 +27,5 @@ for i in range(2,limit):
         sum_of_all_amicable_numbers += i
 
 print("sum of all amicable numbers under",limit,"is",sum_of_all_amicable_numbers)
+
+print("it took {} seconds".format(time.time() - start))
