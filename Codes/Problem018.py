@@ -1,15 +1,17 @@
-import time
+import time, os, sys
+from os import chdir, path
+from sys import argv
 start = time.time()
+
+# changing current working directory to the directory of executed file
+chdir(path.abspath(path.dirname(argv[0]))) 
+
 # You need Problem018-triangle.txt file in the same directory
 file = open('Problem018-triangle.txt')
 
-def str_list_to_int_list(list1):
-    # returns int version of a list strings
-    return [[int(elements) for elements in first_list] for first_list in list1]
-
 data = [line.replace("\n", "").replace(" ", ",").split(",") for line in file.readlines()] # this line converts the file into a list of lists
     
-data = str_list_to_int_list(data)
+data = [[int(elements) for elements in first_list] for first_list in data]     # returns int version of a list strings
 data.reverse()
 
 for row_counter, row in enumerate(data):
