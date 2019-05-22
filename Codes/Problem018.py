@@ -1,7 +1,7 @@
-import time, os, sys
+from time import time
 from os import chdir, path
 from sys import argv
-start = time.time()
+start = time()
 
 # changing current working directory to the directory of executed file
 chdir(path.abspath(path.dirname(argv[0]))) 
@@ -24,4 +24,4 @@ for row_counter, row in enumerate(data):
 file.close()
 print("the maximum sum of a path from top to bottom is:",data[-1][-1])
 
-print("it took {} seconds".format(time.time() - start))
+print("it took {} seconds".format(time() - start))
